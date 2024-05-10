@@ -72,8 +72,8 @@
                 <input type="text" class="display" name="Display">
             </div>
             <div>
-                <input type="button" value="AC">
-                <input type="button" value="DE">
+                <input type="button" value="AC" onclick="Display.value += ''">
+                <input type="button" value="DE" onclick="Display.value  = Display.value.toString().slice(0, -1)">
                 <input type="button" value="." onclick="Display.value += '.'">
                 <input type="button" value="/">
             </div>
