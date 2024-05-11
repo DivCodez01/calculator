@@ -105,6 +105,11 @@
         </form>
     </div>
     <script>
+        document.body.addEventListener("click", (ev) => {
+            ev.preventDefault();
+            document.body.style.background = `${Math.floor()}`;
+            console.log(document.body.style.background = `#${Math.random().toString(16).substr(2, 6)}`);
+        })
     </script>
 </body>
 
