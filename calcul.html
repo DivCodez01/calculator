@@ -68,11 +68,13 @@
 <body>
     <div class="calculator">
         <form>
-            <div>
+            <div style="display: flex; flex-direction: column;">
                 <input type="text" class="display" name="Display">
+                <input type="text" class="display" name="outPut"
+                    style="background: rgb(194, 194, 194); box-shadow: 0 0 10px 0px #405168 inset; border-radius: 10px; padding-right: 5px; color: black;">
             </div>
             <div>
-                <input type="button" value="AC" onclick="Display.value = ''">
+                <input type="button" value="AC" onclick="Display.value = ''; outPut.value = '';">
                 <input type="button" value="DE" onclick="Display.value  = Display.value.toString().slice(0, -1)">
                 <input type="button" value="." onclick="Display.value += '.'">
                 <input type="button" value="/">
@@ -98,7 +100,7 @@
             <div>
                 <input type="button" value="0" onclick="Display.value += '0'">
                 <input type="button" value="00" onclick="Display.value += '00'">
-                <input type="button" value="-" class="equil" onclick="Display.value = eval(Display.value)">
+                <input type="button" value="-" class="equil" onclick="outPut.value = eval(Display.value)">
             </div>
         </form>
     </div>
